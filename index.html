@@ -3,9 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="cdnjs.cloudflare.com" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <title>نجمة الشامل</title>
+  <title>صفحة تعريفية - نجمة الشامل</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -16,7 +14,6 @@
       --accent:#7c8cff;
       --muted:#6b7280;
       --white:#1f2937;
-      --glass:rgba(0,0,0,0.04);
     }
 
     *{box-sizing:border-box}
@@ -26,7 +23,6 @@
       margin:0;
       background:linear-gradient(180deg,#eaf6f0 0%,#dceee7 100%);
       color:var(--white);
-      -webkit-font-smoothing:antialiased;
     }
 
     .container{
@@ -42,7 +38,7 @@
       box-shadow:0 10px 30px rgba(0,0,0,0.08);
     }
 
-    /* ===== Profile ===== */
+
     .profile{
       display:flex;
       flex-direction:column;
@@ -89,51 +85,41 @@
       color:var(--muted);
     }
 
-    /* ===== Links ===== */
+    /* ===== Grid Links ===== */
     .links{
       margin-top:22px;
-      display:flex;
-      flex-direction:column;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
       gap:12px;
     }
 
     .link{
       display:flex;
+      flex-direction:column;
       align-items:center;
-      gap:12px;
-      padding:14px;
-      border-radius:14px;
+      justify-content:center;
+      padding:14px 10px;
+      border-radius:16px;
       background:#f9fafb;
       text-decoration:none;
       color:var(--white);
       border:1px solid #e5e7eb;
       transition:0.2s;
+      text-align:center;
     }
 
     .link:hover{
       background:#f3f4f6;
-      transform:translateY(-2px);
+      transform:translateY(-3px);
     }
 
     .icon{
-      width:40px;
-      height:40px;
-      border-radius:12px;
-      background:#eef2ff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:18px;
+      font-size:26px;
+      margin-bottom:6px;
     }
 
     .link strong{
-      font-size:15px;
-      display:block;
-    }
-
-    .link span{
-      font-size:12px;
-      color:var(--muted);
+      font-size:13px;
     }
 
     /* ===== Actions ===== */
@@ -160,15 +146,13 @@
       border:none;
     }
 
-    .btn:hover{
-      opacity:0.9;
-    }
-
     @media (max-width:440px){
       .container{margin:20px 12px}
+      .links{grid-template-columns:repeat(2,1fr);}
     }
   </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -181,7 +165,6 @@
       </div>
 
       <h1>نجمة الشامل</h1>
-      <p class="tag">متجر إلكتروني</p>
 
       <div class="bio">
         متجر نجمة الشامل الإلكتروني هو أحد أنشطة تعاونية الشامل متعددة الأغراض،
@@ -189,55 +172,52 @@
       </div>
     </div>
 
-    <!-- Links -->
+    <!-- Grid Links -->
     <div class="links">
+
+      <!-- WhatsApp -->
+      <a class="link" href="https://wa.me/966534133284" target="_blank">
+        <div class="icon">🟢</div>
+        <strong>واتساب</strong>
+      </a>
+
+      <!-- Call -->
+      <a class="link" href="tel:+966534133284">
+        <div class="icon">📞</div>
+        <strong>اتصال</strong>
+      </a>
+
       <a class="link" href="https://www.instagram.com/shaml_sa" target="_blank">
         <div class="icon">📷</div>
-        <div>
-          <strong>إنستغرام</strong>
-          <span>@shaml_sa</span>
-        </div>
+        <strong>إنستغرام</strong>
       </a>
 
       <a class="link" href="https://www.tiktok.com/@shaml_sa" target="_blank">
         <div class="icon">🎵</div>
-        <div>
-          <strong>تيك توك</strong>
-          <span>@shaml_sa</span>
-        </div>
+        <strong>تيك توك</strong>
       </a>
 
       <a class="link" href="https://x.com/shaml__sa" target="_blank">
         <div class="icon">💬</div>
-        <div>
-          <strong>تويتر</strong>
-          <span>@shaml__sa</span>
-        </div>
+        <strong>تويتر</strong>
       </a>
 
       <a class="link" href="https://www.snapchat.com/add/shaml_sa" target="_blank">
         <div class="icon">👻</div>
-        <div>
-          <strong>سناب شات</strong>
-          <span>@shaml_sa</span>
-        </div>
+        <strong>سناب شات</strong>
       </a>
 
       <a class="link" href="https://www.youtube.com/@shaml_sa" target="_blank">
         <div class="icon">▶️</div>
-        <div>
-          <strong>يوتيوب</strong>
-          <span>@shaml_sa</span>
-        </div>
+        <strong>يوتيوب</strong>
       </a>
 
       <a class="link" href="https://www.facebook.com/shamlssa" target="_blank">
         <div class="icon">📘</div>
-        <div>
-          <strong>فيسبوك</strong>
-          <span>@shamlssa</span>
-        </div>
+        <strong>فيسبوك</strong>
       </a>
+
+    
     </div>
 
     <!-- Actions -->
