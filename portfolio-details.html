@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض مشاريعنا | أسوار الكنانة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray">
+
+    <header class="hero-mini">
+        <div class="container">
+            <h1 class="fade-in">سجل إنجازاتنا</h1>
+            <p>نحول الرؤى إلى واقع ملموس في كافة القطاعات</p>
+            <a href="index.html" class="btn-back">
+                <i class="fas fa-arrow-right"></i> العودة للرئيسية
+            </a>
+        </div>
+    </header>
+
+    <main class="container py-60">
+        <div class="filter-tabs">
+            <button class="tab-btn active" onclick="filterGallery('all')">الكل</button>
+            <button class="tab-btn" onclick="filterGallery('construction')">المقاولات</button>
+            <button class="tab-btn" onclick="filterGallery('software')">البرمجيات</button>
+            <button class="tab-btn" onclick="filterGallery('smart')">الأنظمة الذكية</button>
+        </div>
+
+        <div class="portfolio-grid-detailed" id="gallery">
+            
+            <div class="gallery-item construction">
+                <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?q=80&w=600" alt="واجهة زجاجية">
+                <div class="item-info">
+                    <h5>تركيب واجهات زجاجية</h5>
+                    <span>مقاولات عامة</span>
+                </div>
+            </div>
+
+            <div class="gallery-item software">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600" alt="تطبيق بوينت">
+                <div class="item-info">
+                    <h5>منصة Pointerp App</h5>
+                    <span>حلول تقنية</span>
+                </div>
+            </div>
+
+            <div class="gallery-item smart">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=600" alt="نظام ذكي">
+                <div class="item-info">
+                    <h5>أتمتة المكاتب</h5>
+                    <span>أنظمة ذكية</span>
+                </div>
+            </div>
+
+            <div class="gallery-item construction">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600" alt="أعمال ديكور">
+                <div class="item-info">
+                    <h5>أعمال نجارة وديكور</h5>
+                    <span>مقاولات عامة</span>
+                </div>
+            </div>
+
+            <div class="gallery-item software">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=600" alt="تسويق رقمي">
+                <div class="item-info">
+                    <h5>حملة تسويق متكاملة</h5>
+                    <span>دعاية وإعلان</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="main-footer" style="padding: 40px 0 20px;">
+        <div class="container">
+            <p>© 2026 شركة أسوار الكنانة - فخر الصناعة والإتقان</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const btns = document.querySelectorAll('.tab-btn');
+
+            // تحديث الأزرار
+            btns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // تصفية العناصر
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    setTimeout(() => item.style.opacity = '1', 10);
+                } else {
+                    item.style.opacity = '0';
+                    setTimeout(() => item.style.display = 'none', 300);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,250 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>نجمة الشامل</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-
-  <style>
-    :root{
-      --card:#ffffff;
-      --accent:#7c8cff;
-      --muted:#6b7280;
-      --text:#1f2937;
-    }
-
-    *{box-sizing:border-box}
-
-    body{
-      font-family:'Cairo',sans-serif;
-      margin:0;
-      background:linear-gradient(180deg,#eaf6f0 0%,#dceee7 100%);
-      color:var(--text);
-    }
-
-    .container{
-      max-width:420px;
-      margin:40px auto;
-      padding:20px;
-    }
-
-    .card{
-      background:var(--card);
-      border-radius:20px;
-      padding:22px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    /* Profile */
-    .profile{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-    }
-
-    .avatar{
-      width:96px;
-      height:96px;
-      border-radius:50%;
-      overflow:hidden;
-      border:4px solid #eef2ff;
-      background:linear-gradient(135deg,#7c8cff,#9aa7ff);
-      margin-bottom:12px;
-    }
-
-    .avatar img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-    }
-
-    h1{
-      margin:0;
-      font-size:22px;
-      font-weight:700;
-    }
-
-    .tag{
-      margin:4px 0;
-      font-size:14px;
-      color:var(--accent);
-      font-weight:600;
-    }
-
-    .bio{
-      margin-top:10px;
-      font-size:14px;
-      line-height:1.6;
-      color:var(--muted);
-    }
-
-    /* Social Grid */
-    .links{
-      margin-top:22px;
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-    }
-
-    .link{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      height:64px;
-      border-radius:16px;
-      background:#f9fafb;
-      text-decoration:none;
-      color:var(--text);
-      border:1px solid #e5e7eb;
-      transition:.2s;
-      font-size:26px;
-    }
-
-    .link:hover{
-      transform:translateY(-3px);
-      background:#f3f4f6;
-    }
-
-    /* Quick Actions (official icons) */
-    .quick-actions{
-      display:flex;
-      justify-content:center;
-      gap:16px;
-      margin-top:18px;
-    }
-
-    .quick-actions a{
-      width:42px;
-      height:42px;
-      border-radius:50%;
-      background:#eef2ff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
-      font-size:18px;
-      transition:.2s;
-    }
-
-    .quick-actions a:hover{
-      transform:scale(1.15);
-    }
-
-    .wa{color:#25D366;}
-    .call{color:#2563eb;}
-    .mail{color:#dc2626;}
-
-    /* Buttons */
-    .actions{
-      display:flex;
-      gap:10px;
-      margin-top:20px;
-    }
-
-    .btn{
-      flex:1;
-      padding:12px;
-      border-radius:12px;
-      border:1px solid #e5e7eb;
-      background:#f9fafb;
-      font-family:'Cairo',sans-serif;
-      cursor:pointer;
-      font-size:14px;
-    }
-
-    .btn.primary{
-      background:linear-gradient(90deg,#7c8cff,#9aa7ff);
-      color:white;
-      border:none;
-    }
-
-    @media (max-width:440px){
-      .container{margin:20px 12px}
-      .links{grid-template-columns:repeat(2,1fr);}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة أسوار الكنانة | للمقاولات والبرمجيات</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
-  <div class="card">
+    <header class="hero">
+        <div class="container">
+            <img src="logo.png" alt="شعار شركة أسوار الكنانة" class="hero__logo">
+            <h1 class="fade-in">شركة أسوار الكنانة</h1>
+            <p class="fade-in">إتقان في المقاولات.. ابتكار في البرمجيات</p>
+            
+            <div class="hero-actions">
+                <a href="https://wa.me/966XXXXXXXXX" class="btn-cta">
+                    <i class="fab fa-whatsapp"></i> تواصل معنا
+                </a>
+                
+                <div class="hero-quick-contact">
+                    <a href="tel:+9665XXXXXXXX" class="quick-icon" title="اتصل بنا">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
+                    <a href="mailto:info@aswar-alkenana.com" class="quick-icon" title="أرسل إيميل">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <!-- Profile -->
-    <div class="profile">
-      <div class="avatar">
-        <img src="https://cdn.salla.sa/qAyGK/PmzDzVsbyFMi1ZeKhiJr44atYwLtQeoO5w0kZZjB.jpg" alt="avatar">
-      </div>
-      <h1>نجمة الشامل</h1>
-    
-      <div class="bio">
-        متجر نجمة الشامل الإلكتروني هو أحد أنشطة تعاونية الشامل متعددة الأغراض،
-        المرخصة بقرار وزاري رخصة رقم 234 من وزير الموارد البشرية والتنمية الاجتماعية
-      </div>
+    <main>
+        <section id="official-info" class="compact-section">
+            <div class="container">
+                <div class="official-grid-mini">
+                    <article class="mini-card">
+                        <div class="mini-icon"><i class="fas fa-file-invoice"></i></div>
+                        <div class="mini-content">
+                            <h4>السجل التجاري</h4>
+                            <p>1010XXXXXX</p>
+                        </div>
+                    </article>
+                    
+                    <div class="mini-divider"></div>
+
+                    <article class="mini-card">
+                        <div class="mini-icon"><i class="fas fa-percent"></i></div>
+                        <div class="mini-content">
+                            <h4>الرقم الضريبي</h4>
+                            <p>3000XXXXXXXXX</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="container">
+            <header class="section-header">
+                <h2>خدماتنا الأساسية</h2>
+            </header>
+            
+            <div class="services-wrapper">
+                <div class="category-box">
+                    <div class="category-header">
+                        <i class="fas fa-hard-hat"></i>
+                        <h3>قسم المقاولات العامة</h3>
+                    </div>
+                    <div class="grid">
+                        <div class="card">أعمال حدادة وفورجيه</div>
+                        <div class="card">أعمال نجارة متكاملة</div>
+                        <div class="card">تركيب زجاج سيكوريت</div>
+                        <div class="card">واجهات زجاجية حديثة</div>
+                    </div>
+                </div>
+
+                <div class="category-box">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>البرمجيات والحلول التقنية</h3>
+                    </div>
+                    <div class="grid">
+                        <div class="card">تطوير المواقع والمنصات</div>
+                        <div class="card">تطبيق Pointerp App</div>
+                        <div class="card">حلول الدعاية والإعلان</div>
+                        <div class="card">التسويق الرقمي</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="bg-gray">
+    <div class="container">
+        <header class="section-header">
+            <h2>معرض أعمالنا</h2>
+        </header>
+        <div class="portfolio-grid">
+            
+            <a href="portfolio-details.html#construction" class="work-card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=400" alt="مشاريع مقاولات">
+                    <figcaption class="overlay">
+                        <span>عرض مشاريع المقاولات</span>
+                        <i class="fas fa-plus-circle"></i>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="portfolio-details.html#software" class="work-card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400" alt="حلول برمجية">
+                    <figcaption class="overlay">
+                        <span>عرض الحلول البرمجية</span>
+                        <i class="fas fa-plus-circle"></i>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="portfolio-details.html#factories" class="work-card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=400" alt="تجهيز مصانع">
+                    <figcaption class="overlay">
+                        <span>عرض تجهيزات المصانع</span>
+                        <i class="fas fa-plus-circle"></i>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <a href="portfolio-details.html#smart-systems" class="work-card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400" alt="أنظمة ذكية">
+                    <figcaption class="overlay">
+                        <span>عرض الأنظمة الذكية</span>
+                        <i class="fas fa-plus-circle"></i>
+                    </figcaption>
+                </figure>
+            </a>
+
+        </div>
     </div>
+</section>
+        <section class="bg-primary-dark">
+            <div class="container">
+                <div class="download-flex">
+                    <div class="download-text">
+                        <h3>بروفايل الشركة 2026</h3>
+                        <p>حمّل النسخة الكاملة للاطلاع على تفاصيل وسابقة أعمالنا.</p>
+                    </div>
+                    <a href="company-profile.pdf" class="btn-gold" download>
+                        <i class="fas fa-file-pdf"></i> تحميل الملف (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Official Small Icons -->
-    <div class="quick-actions">
-      <a class="wa" href="https://wa.me/966533661915" target="_blank" title="WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
-      <a class="call" href="tel:+966538622244" title="Call">
-        <i class="fa-solid fa-phone"></i>
-      </a>
-      <a class="mail" href="mailto:info@shaml.sa" title="Email">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-    </div>
-
-    <!-- Social Icons Grid -->
-    <div class="links">
-      <a class="link" href="https://www.instagram.com/shaml_sa" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a class="link" href="https://www.tiktok.com/@shaml_sa" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-      <a class="link" href="https://x.com/shaml__sa" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-      <a class="link" href="https://www.snapchat.com/add/shaml_sa" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
-      <a class="link" href="https://www.youtube.com/@shaml_sa" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-      <a class="link" href="https://www.facebook.com/shamlssa" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-    </div>
-
-    
-
-    <!-- Actions -->
-    <div class="actions">
-      <button class="btn primary" id="copyBtn">نسخ رابط الصفحة</button>
-      <button class="btn" id="shareBtn">مشاركة</button>
-    </div>
-
-  </div>
-</div>
-
-<script>
-  const pageLink = window.location.href;
-
-  document.getElementById('copyBtn').onclick = async () => {
-    await navigator.clipboard.writeText(pageLink);
-    copyBtn.textContent = 'تم النسخ ✅';
-    setTimeout(()=> copyBtn.textContent = 'نسخ رابط الصفحة',2000);
-  };
-
-  document.getElementById('shareBtn').onclick = () => {
-    if(navigator.share){
-      navigator.share({
-        title: document.title,
-        text: 'تواصل معنا',
-        url: pageLink
-      });
-    }else{
-      alert('المشاركة غير مدعومة – يمكنك نسخ الرابط');
-    }
-  };
-</script>
+    <footer class="main-footer">
+        <div class="container">
+            <nav class="social-links">
+                <a href="https://facebook.com/USERNAME" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/USERNAME" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://snapchat.com/add/USERNAME" target="_blank" rel="noopener" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                <a href="https://tiktok.com/@USERNAME" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </nav>
+            
+            <address class="footer-address">
+                📍 حائل - المملكة العربية السعودية
+            </address>
+            
+            <p class="copyright">
+                &copy; 2026 جميع الحقوق محفوظة لشركة أسوار الكنانة
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
