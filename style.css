@@ -2,7 +2,7 @@
     /* الألوان الأساسية */
     --primary-color: #0f172a;       /* الكحلي الداكن */
     --primary-soft: #1e293b;
-    --accent-color: #bfa14a;        /* الذهبي */
+    --accent-color: #181644;        /* الذهبي */
     --white: #ffffff;
     --text-muted: #64748b;
     
@@ -55,7 +55,7 @@ section { padding: 80px 0; }
     content: ''; 
     width: 60%; 
     height: 4px; 
-    background: var(--accent-color); 
+    background:var(--white); 
     position: absolute; 
     bottom: -15px; 
     left: 20%; 
@@ -64,8 +64,8 @@ section { padding: 80px 0; }
 
 /* 3. الهيدر (Hero Section) */
 .hero { 
-    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                url('https://images.unsplash.com/photo-1541913051-10c0c8a3359a?q=80&w=1400'); 
+    background:
+    linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1470'); 
     background-size: cover; 
     background-position: center; 
     padding: clamp(80px, 15vh, 140px) 20px; 
@@ -74,7 +74,7 @@ section { padding: 80px 0; }
 }
 
 .hero__logo { 
-    width: 100px; 
+    width: 150px; 
     background: var(--white); 
     padding: 10px; 
     border-radius: 50%; 
@@ -117,8 +117,7 @@ section { padding: 80px 0; }
     width: 45px;
     height: 45px;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(191, 161, 74, 0.5);
-    color: var(--accent-color);
+    color: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -127,11 +126,7 @@ section { padding: 80px 0; }
     transition: var(--transition-smooth);
 }
 
-.quick-icon:hover {
-    background: var(--accent-color);
-    color: var(--primary-color);
-    transform: rotate(360deg);
-}
+
 
 /* 4. شريط البيانات الرسمي (Compact) */
 .compact-section { padding: 40px 0; background: var(--white); }
@@ -400,5 +395,3 @@ section { padding: 80px 0; }
 .mb-100 {
     margin-bottom: 5px; /* يمكنك زيادة أو تقليل الرقم حسب رغبتك */
 }
-
-
