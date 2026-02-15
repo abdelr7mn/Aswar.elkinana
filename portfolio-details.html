@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray">
+<body class="bg-light">
 
     <header class="hero-mini">
         <div class="container">
@@ -19,86 +19,63 @@
             </a>
         </div>
     </header>
+    
 
     <main class="container py-60">
-        <div class="filter-tabs">
-            <button class="tab-btn active" onclick="filterGallery('all')">الكل</button>
-            <button class="tab-btn" onclick="filterGallery('construction')">المقاولات</button>
-            <button class="tab-btn" onclick="filterGallery('software')">البرمجيات</button>
-            <button class="tab-btn" onclick="filterGallery('smart')">الأنظمة الذكية</button>
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="construction">المقاولات</button>
+            <button class="filter-btn" data-filter="software">البرمجيات</button>
+            <button class="filter-btn" data-filter="smart">الأنظمة الذكية</button>
         </div>
 
-        <div class="portfolio-grid-detailed" id="gallery">
+        <div class="portfolio-grid" id="portfolio-grid">
             
-            <div class="gallery-item construction">
-                <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?q=80&w=600" alt="واجهة زجاجية">
-                <div class="item-info">
-                    <h5>تركيب واجهات زجاجية</h5>
-                    <span>مقاولات عامة</span>
+            <div class="portfolio-item" data-category="construction">
+                <div class="item-inner">
+                    <div class="item-img">
+                        <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?q=80&w=600" alt="واجهة زجاجية">
+                    </div>
+                    <div class="item-content">
+                        <h5>تركيب واجهات زجاجية</h5>
+                        <p>مقاولات عامة</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="gallery-item software">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600" alt="تطبيق بوينت">
-                <div class="item-info">
-                    <h5>منصة Pointerp App</h5>
-                    <span>حلول تقنية</span>
+            <div class="portfolio-item" data-category="software">
+                <div class="item-inner">
+                    <div class="item-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600" alt="تطبيق بوينت">
+                    </div>
+                    <div class="item-content">
+                        <h5>منصة Pointerp App</h5>
+                        <p>حلول تقنية</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="gallery-item smart">
-                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=600" alt="نظام ذكي">
-                <div class="item-info">
-                    <h5>أتمتة المكاتب</h5>
-                    <span>أنظمة ذكية</span>
+            <div class="portfolio-item" data-category="smart">
+                <div class="item-inner">
+                    <div class="item-img">
+                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=600" alt="نظام ذكي">
+                    </div>
+                    <div class="item-content">
+                        <h5>أتمتة المكاتب</h5>
+                        <p>أنظمة ذكية</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="gallery-item construction">
-                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600" alt="أعمال ديكور">
-                <div class="item-info">
-                    <h5>أعمال نجارة وديكور</h5>
-                    <span>مقاولات عامة</span>
-                </div>
             </div>
-
-            <div class="gallery-item software">
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=600" alt="تسويق رقمي">
-                <div class="item-info">
-                    <h5>حملة تسويق متكاملة</h5>
-                    <span>دعاية وإعلان</span>
-                </div>
-            </div>
-
-        </div>
     </main>
 
-    <footer class="main-footer" style="padding: 40px 0 20px;">
-        <div class="container">
+    <footer class="main-footer">
+        <div class="container text-center">
             <p>© 2026 شركة أسوار الكنانة - فخر الصناعة والإتقان</p>
         </div>
     </footer>
 
-    <script>
-        function filterGallery(category) {
-            const items = document.querySelectorAll('.gallery-item');
-            const btns = document.querySelectorAll('.tab-btn');
-
-            // تحديث الأزرار
-            btns.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            // تصفية العناصر
-            items.forEach(item => {
-                if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'block';
-                    setTimeout(() => item.style.opacity = '1', 10);
-                } else {
-                    item.style.opacity = '0';
-                    setTimeout(() => item.style.display = 'none', 300);
-                }
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
