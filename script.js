@@ -1,27 +1,34 @@
-// ننتظر حتى يتم تحميل الصفحة بالكامل
 document.addEventListener('DOMContentLoaded', () => {
-    
     const buttons = document.querySelectorAll('.filter-btn');
     const items = document.querySelectorAll('.portfolio-item');
 
+    // تشغيل الأنيميشن لأول مرة عند تحميل الصفحة
+    items.forEach(item => item.classList.add('show'));
+
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            // 1. إزالة التحديد عن كل الأزرار ووضعه على الزر الذي ضغطت عليه
             buttons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
-            // 2. الحصول على التصنيف المطلوب
             const filter = button.getAttribute('data-filter');
 
-            // 3. التحكم في ظهور العناصر
             items.forEach(item => {
                 const category = item.getAttribute('data-category');
                 
-                if (filter === 'all' || filter === category) {
-                    item.style.display = 'block'; // أظهر العنصر
-                } else {
-                    item.style.display = 'none';  // أخفِ العنصر
-                }
+                // إضافة تأخير بسيط لإعطاء شكل جمالي
+                item.classList.remove('show');
+                
+                setTimeout(() => {
+                    if (filter === 'all' || filter === category) {
+                        item.style.display = 'block';
+                        // نستخدم requestAnimationFrame للتأكد من أن المتصفح استوعب ظهور العنصر قبل تحريكه
+                        requestAnimationFrame(() => {
+                            item.classList.add('show');
+                        });
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }, 300); // وقت الأنيميشن
             });
         });
     });

@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شركة أسوار الكنانة</title>
+    <title>شركة أسوار الكنانة | للمقاولات والبرمجيات</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="hero">
-        <div class="container">
-            <img src="images\logo.png" alt="شعار شركة أسوار الكنانة" class="hero__logo">
+        <div class="container" data-aos="zoom-out" data-aos-duration="1000">
+            <img src="images/logo.png" alt="شعار شركة أسوار الكنانة" class="hero__logo">
             <h1 class="fade-in">شركة أسوار الكنانة</h1>
             <p class="fade-in">إتقان في المقاولات.. ابتكار في البرمجيات</p>
             
@@ -24,27 +26,16 @@
                 </a>
                 
                 <div class="hero-quick-contact">
-
-   <div class="hero-quick-contact">
-    <a href="tel:+966537332443" class="quick-icon" title="اتصل بنا">
-        <i class="fas fa-phone-alt"></i>
-    </a>
-
-    <a href="mailto:sondosart2013@gmail.com" class="quick-icon" title="أرسل إيميل">
-        <i class="fas fa-envelope"></i>
-    </a>
-
-    <a href="https://maps.app.goo.gl/JmSNy6iwSau18vM79?g_st=ic" target="_blank" class="quick-icon" title="موقعنا">
-        <i class="fas fa-map-marker-alt"></i>
-    </a>
-</div>
-</div>
+                    <a href="tel:+966537332443" class="quick-icon" title="اتصل بنا"><i class="fas fa-phone-alt"></i></a>
+                    <a href="mailto:sondosart2013@gmail.com" class="quick-icon" title="أرسل إيميل"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="quick-icon" title="موقعنا"><i class="fas fa-map-marker-alt"></i></a>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="official-info" class="compact-section">
+        <section id="official-info" class="compact-section" data-aos="fade-up">
             <div class="container">
                 <div class="official-grid-mini">
                     <article class="mini-card">
@@ -69,105 +60,117 @@
         </section>
 
         <section id="services" class="container">
-            <header class="section-header">
+            <header class="section-header" data-aos="fade-down">
                 <h2>خدماتنا الأساسية</h2>
             </header>
             
             <div class="services-wrapper">
-                <div class="category-box">
-                    <div class="category-header">
-                        <i class="fas fa-hard-hat"></i>
-                        <h3>قسم المقاولات العامة</h3>
+                <a href="construction-details.html" class="category-link" data-aos="fade-left" data-aos-delay="100">
+                    <div class="category-box">
+                        <div class="category-header">
+                            <i class="fas fa-hard-hat"></i>
+                            <h3>قسم المقاولات العامة</h3>
+                        </div>
+                        <div class="grid">
+                            <div class="card">حروف بارزة</div>
+                            <div class="card">أعمال الكلادينج</div>
+                            <div class="card">أعمال النجارة</div>
+                            <div class="card">أعمال الحدادة</div>
+                        </div>
                     </div>
-                    <div class="grid">
-                        <div class="card">أعمال حدادة وفورجيه</div>
-                        <div class="card">أعمال نجارة متكاملة</div>
-                        <div class="card">تركيب زجاج سيكوريت</div>
-                        <div class="card">واجهات زجاجية حديثة</div>
-                    </div>
-                </div>
+                </a>
 
-                <div class="category-box">
-                    <div class="category-header">
-                        <i class="fas fa-code"></i>
-                        <h3>البرمجيات والحلول التقنية</h3>
+                <a href="software-details.html" class="category-link" data-aos="fade-right" data-aos-delay="200">
+                    <div class="category-box">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>البرمجيات والحلول التقنية</h3>
+                        </div>
+                        <div class="grid">
+                            <div class="card">تطوير المواقع</div>
+                            <div class="card">تطبيق Pointerp App</div>
+                            <div class="card">حلول الدعاية</div>
+                        </div>
                     </div>
-                    <div class="grid">
-                        <div class="card">تطوير المواقع والمنصات</div>
-                        <div class="card">تطبيق Pointerp App</div>
-                        <div class="card">حلول الدعاية والإعلان</div>
-                        <div class="card">التسويق الرقمي</div>
-                    </div>
-                </div>
+                </a>
             </div>
         </section>
 
-        <section id="portfolio" class="bg-gray">
+        
+
+        <section id="partners" class="partners-section">
     <div class="container">
-        <header class="section-header">
-            <h2>معرض أعمالنا</h2>
-        </header>
-        <div class="portfolio-grid">
+        <header class="section-header" data-aos="fade-up">
             
-            <a href="portfolio-details.html#construction" class="work-card">
-                <figure>
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=400" alt="مشاريع مقاولات">
-                    <figcaption class="overlay">
-                        <span>عرض مشاريع المقاولات</span>
-                        <i class="fas fa-plus-circle"></i>
-                    </figcaption>
-                </figure>
-            </a>
+            <h2>شركاء النجاح</h2>
+            <div class="header-line"></div>
+        </header>
 
-            <a href="portfolio-details.html#software" class="work-card">
-                <figure>
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400" alt="حلول برمجية">
-                    <figcaption class="overlay">
-                        <span>عرض الحلول البرمجية</span>
-                        <i class="fas fa-plus-circle"></i>
-                    </figcaption>
-                </figure>
-            </a>
-
-            <a href="portfolio-details.html#factories" class="work-card">
-                <figure>
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=400" alt="تجهيز مصانع">
-                    <figcaption class="overlay">
-                        <span>عرض تجهيزات المصانع</span>
-                        <i class="fas fa-plus-circle"></i>
-                    </figcaption>
-                </figure>
-            </a>
-
-            <a href="portfolio-details.html#smart-systems" class="work-card">
-                <figure>
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400" alt="أنظمة ذكية">
-                    <figcaption class="overlay">
-                        <span>عرض الأنظمة الذكية</span>
-                        <i class="fas fa-plus-circle"></i>
-                    </figcaption>
-                </figure>
-            </a>
-
-        </div>
-    </div>
-    <section class="portfolio mb-100"> 
-   </section>
-
-<section class="bg-primary-dark">
-    <div class="container">
-        <div class="download-flex">
-            <div class="download-text">
-                <h3>بروفايل الشركة </h3>
-                <p>تصفح النسخة الكاملة للاطلاع على تفاصيل وسابقة أعمالنا.</p>
+        <div class="partners-grid" data-aos="fade-up" data-aos-delay="200">
+            <div class="partner-card">
+                <img src="images/partners/1.png" alt="اسم الشريك">
             </div>
-            <a href="images\files\company.pdf.pdf" class="btn-gold" target="_blank">
-                <i class="fas fa-file-pdf"></i> عرض الملف 
-            </a>
+            <div class="partner-card">
+                <img src="images/partners/2.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/3.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/4.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/5.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/6.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/7.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/8.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/9.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/10.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/11.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/12.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/13.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/14.png" alt="اسم الشريك">
+            </div>
+            <div class="partner-card">
+                <img src="images/partners/15.png" alt="اسم الشريك">
+            </div>
+            
         </div>
     </div>
 </section>
-       <section class="bg-primary-dark">
+
+        <section class="bg-primary-dark" data-aos="fade-up">
+            <div class="container">
+                <div class="download-flex">
+                    <div class="download-text">
+                        <h3>بروفايل الشركة </h3>
+                        <p>تصفح النسخة الكاملة للاطلاع على تفاصيل أعمالنا.</p>
+                    </div>
+                    <a href="images/files/company.pdf" class="btn-gold" target="_blank">
+                        <i class="fas fa-file-pdf"></i> عرض الملف 
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="bg-primary-dark">
     <div class="container">
         <div class="download-flex">
             <div class="download-text">
@@ -185,21 +188,27 @@
     <footer class="main-footer">
         <div class="container">
             <nav class="social-links">
-                <a href="https://facebook.com/USERNAME" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/USERNAME" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://snapchat.com/add/USERNAME" target="_blank" rel="noopener" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
-                <a href="https://tiktok.com/@USERNAME" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
             </nav>
-            
-            <address class="footer-address">
+             <address class="footer-address">
                 📍 حائل - المملكة العربية السعودية
             </address>
-            
-            <p class="copyright">
-                &copy; 2026 جميع الحقوق محفوظة لشركة أسوار الكنانة
-            </p>
+            <p class="copyright">© 2026 جميع الحقوق محفوظة لشركة أسوار الكنانة</p>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // تشغيل مكتبة الأنيميشن AOS
+        AOS.init({
+            duration: 1000, // مدة الحركة
+            once: true,     // تتحرك مرة واحدة فقط عند النزول
+            offset: 120     // المسافة قبل بدء الحركة
+        });
+    </script>
 </body>
 </html>
