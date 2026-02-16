@@ -1,0 +1,115 @@
+/* --- تنسيقات صفحة التفاصيل (المقاولات والبرمجيات) --- */
+
+.hero-mini { 
+    background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200'); 
+    background-size: cover; 
+    padding: 80px 0; 
+    color: #ffffff; 
+    border-bottom: 4px solid var(--accent-color); 
+    text-align: center; /* لضمان توسط نص الهيرو */
+}
+
+.details-wrapper { 
+    display: flex; 
+    flex-direction: row-reverse; /* لضمان ترتيب المحتوى والسايدبار صح في الـ RTL */
+    gap: 30px; 
+    margin-top: -40px; 
+    text-align: right; 
+}
+
+.details-content { 
+    flex: 2; 
+    min-width: 0; /* بيمنع خروج العناصر عن الحجم المحدد */
+}
+
+.details-sidebar { 
+    flex: 1; 
+}
+
+.info-box, .services-list, .cta-box, .features-mini { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 15px; 
+    margin-bottom: 25px; 
+    border: 1px solid #eee; 
+    box-shadow: var(--shadow-md);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* ضبط الشبكة (Grid) عشان الصور والعناصر متدخلش في بعضها */
+.detail-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+.detail-card { 
+    padding: 25px; 
+    background: #f8fafc; 
+    border-radius: 12px; 
+    text-align: center; 
+    border: 1px solid #e2e8f0;
+}
+
+.detail-card i { 
+    font-size: 2.5rem; 
+    color: var(--primary-color); 
+    margin-bottom: 15px; 
+    display: block;
+}
+
+.detail-card h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* معرض صور الخدمات - الحل النهائي لمشكلة التكدس في الصورة */
+.card-gallery { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 8px; 
+    margin-top: 15px; 
+    padding-top: 15px; 
+    border-top: 1px dashed #ddd; 
+}
+
+.gallery-placeholder, .card-gallery img { 
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
+    background: #eef2f6; 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #cbd5e1; 
+    font-size: 1rem; 
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
+    object-fit: cover;
+}
+
+/* استجابة الموبايل */
+@media (max-width: 768px) {
+    .details-wrapper {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    
+    .hero-mini {
+        padding: 40px 20px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr; /* كارت واحد في الصف في الموبايل */
+    }
+}
