@@ -61,6 +61,7 @@ section { padding: 80px 0; }
     bottom: -15px; 
     left: 20%; 
     border-radius: 2px;
+
 }
 
 /* 3. الهيدر (Hero Section) المحدث */
@@ -115,6 +116,27 @@ section { padding: 80px 0; }
     transform: translateY(-3px); 
     background: var(--primary-soft); /* تفتيح خفيف عند الهوفر */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); 
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff !important; /* لون النص والأيقونة أبيض */
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: var(--transition-smooth);
+    opacity: 0.9;
+}
+
+.btn-back i {
+    color: #ffffff; /* التأكد من أن السهم أبيض أيضاً */
+}
+
+.btn-back:hover {
+    opacity: 1;
+    transform: translateX(5px); /* حركة بسيطة لليمين عند التأشير */
 }
 
 .hero-quick-contact {
